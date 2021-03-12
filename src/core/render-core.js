@@ -106,10 +106,8 @@ async function render(_opts = {}) {
   try {
     logger.info('Set browser viewport..');
     await page.setViewport(opts.viewport);
-    if (opts.emulateScreenMedia) {
-      logger.info('Emulate @media screen..');
-      await page.emulateMedia('screen');
-    }
+
+
 
     if (opts.cookies && opts.cookies.length > 0) {
       logger.info('Setting cookies..');
